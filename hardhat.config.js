@@ -14,9 +14,18 @@ module.exports = {
     rinkeby: {
       url: process.env.RINKEBY_URL || "",
       accounts:
-        process.env.INFURA_ACCOUNT !== undefined
-          ? [process.env.INFURA_ACCOUNT]
-          : [],
+        process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
+    },
+    kovan: {
+      url: process.env.KOVAN_URL || "",
+      accounts:
+        process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
+    },
+  },
+  settings: {
+    optimizer: {
+      enabled: true,
+      runs: 100,
     },
   },
 };
