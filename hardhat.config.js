@@ -11,6 +11,7 @@ require("solidity-coverage");
 module.exports = {
   solidity: "0.8.7",
   networks: {
+    hardhat: {},
     rinkeby: {
       url: process.env.RINKEBY_URL || "",
       accounts:
