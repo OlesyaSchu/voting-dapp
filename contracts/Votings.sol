@@ -49,7 +49,7 @@ contract Votings {
         Voting storage voting = votings[_id];
 
         require(!voting.completed, "Voting already completed!");
-        require(msg.value >= 1 ether, "Wrong amount of ethers!");
+        require(msg.value >= 0.01 ether, "Wrong amount of ethers!");
         require(msg.sender != _candidate, "You can't vote for yourself");
 
         uint i = 0;
